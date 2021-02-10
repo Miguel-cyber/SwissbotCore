@@ -1284,7 +1284,7 @@ namespace SwissbotCore.Modules
         [DiscordCommand("images")]
         public async Task imgs()
         {
-            await Context.Channel.SendMessageAsync("Getting imgages....");
+            await Context.Channel.SendMessageAsync("Getting images...");
             string htmlcont = "<!DOCTYPE html> <html lang=\"en\"> <head> </head> <body>\n";
             foreach (var chan in Context.Guild.TextChannels)
             {
@@ -1301,7 +1301,7 @@ namespace SwissbotCore.Modules
             }
             htmlcont += "</body> </html>";
             File.WriteAllText($"{Environment.CurrentDirectory}{Global.systemSlash}Data{Global.systemSlash}img.html", htmlcont);
-            await Context.Channel.SendFileAsync($"{Environment.CurrentDirectory}{Global.systemSlash}Data{Global.systemSlash}img.html", "heres the immages");
+            await Context.Channel.SendFileAsync($"{Environment.CurrentDirectory}{Global.systemSlash}Data{Global.systemSlash}img.html", "heres the images");
         }
         internal JsonItems modifyJsonData(JsonItems data, string iName, object iValue)
         {
